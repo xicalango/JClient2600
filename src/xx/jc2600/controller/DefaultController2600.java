@@ -17,7 +17,12 @@ public class DefaultController2600 implements Controller2600 {
 	@Override
 	public void connect(String hostname, int port) {
 		client2600 = new DefaultClient2600(hostname, port);
-		client2600.start();
+		try {
+			client2600.start();
+		} catch ( Client2600Exception e) {
+			client2600 = null;
+			throw e;
+		}
 	}
 	
 	@Override

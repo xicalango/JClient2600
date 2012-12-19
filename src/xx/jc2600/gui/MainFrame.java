@@ -2,10 +2,12 @@ package xx.jc2600.gui;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.net.ConnectException;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import xx.jc2600.client.Client2600Exception;
 import xx.jc2600.controller.Controller2600;
 
 public class MainFrame extends JFrame implements MainGUIContoller {
@@ -17,6 +19,7 @@ public class MainFrame extends JFrame implements MainGUIContoller {
 	private Controller2600 controller2600;
 	
 	public MainFrame(Controller2600 controller2600) {
+		super("Client 2600");
 		this.controller2600 = controller2600;
 		
 		panel = new Button2600Panel(controller2600);
@@ -66,6 +69,15 @@ public class MainFrame extends JFrame implements MainGUIContoller {
 			} catch (IllegalArgumentException e) {
 				JOptionPane.showMessageDialog(this, "Malformed connection string: " + result);
 				return false;
+			} catch (Client2600Exception e) {
+				try {
+					throw e.getCause();
+				} catch (ConnectException e1) {
+					JOptionPane.showMessageDialog(this, "Connection failed...");
+					return false;
+				} catch(Throwable e1) {
+					throw new Client2600Exception(e1);
+				}
 			}
 		} else {
 			return false;
