@@ -12,7 +12,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		Controller2600 controller2600 = new DefaultController2600();
-		controller2600.startApplication("192.168.34.222", 2600);
+		//controller2600.startApplication("192.168.34.222", 2600);
 
 		MainFrame mf = new MainFrame(controller2600);
 		
