@@ -14,7 +14,7 @@ interface IButton2600PanelModel extends GUIMVC, KeyListener {
 
 class Button2600PanelModel implements IButton2600PanelModel {
 
-	private Button2600PanelView view;
+	private IButton2600PanelView view;
 	private IButton2600PanelControl control;
 	
 	private Map<ButtonType, Boolean> pressedButtons = new HashMap<>();

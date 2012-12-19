@@ -15,7 +15,7 @@ interface IButton2600PanelControl extends GUIMVC {
 
 public class Button2600Panel implements IButton2600PanelControl {
 
-	private Button2600PanelModel model;
+	private IButton2600PanelModel model;
 	private Controller2600 controller2600;
 	
 	public Button2600Panel(Controller2600 controller2600) {

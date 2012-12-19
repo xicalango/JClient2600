@@ -74,9 +74,8 @@ public class DefaultClient2600 implements Runnable, Client2600 {
 			
 		}
 		
-		
-		
 		try {
+			out.write( new byte[] { Packet.createQuitPacket().getSymbol() } );
 			connection.close();
 		} catch (IOException e) {
 			e.printStackTrace();
