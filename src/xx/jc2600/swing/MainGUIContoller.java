@@ -1,4 +1,4 @@
-package xx.jc2600.gui;
+package xx.jc2600.swing;
 
 public interface MainGUIContoller {
 

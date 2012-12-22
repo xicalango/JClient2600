@@ -2,7 +2,7 @@ package xx.jc2600;
 
 import xx.jc2600.controller.Controller2600;
 import xx.jc2600.controller.DefaultController2600;
-import xx.jc2600.gui.MainFrame;
+import xx.jc2600.swing.MainFrame;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package xx.jc2600.gui;
+package xx.jc2600.swing;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

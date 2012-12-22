@@ -1,4 +1,4 @@
-package xx.jc2600.gui;
+package xx.jc2600.swing;
 
 import java.awt.Color;
 import java.awt.Container;

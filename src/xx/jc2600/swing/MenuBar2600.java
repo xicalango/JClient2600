@@ -1,4 +1,4 @@
-package xx.jc2600.gui;
+package xx.jc2600.swing;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
